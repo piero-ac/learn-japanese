@@ -48,7 +48,7 @@ table {
     border-spacing: 0;
 }
 
-body {
+/* body {
     height: 100%;
     padding: 50px 40px;
     display: flex;
@@ -61,9 +61,24 @@ body {
     background-position: center center;
     background-attachment: fixed;
     color: white;
+} */
+
+#index-body {
+    height: 100vh;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
 }
 
-header {
+#index-header {
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -72,23 +87,23 @@ header {
     color: white;
 }
 
-header h1 {
+#index-header h1 {
     font-size: 3rem;
     text-align: center;
 }
 
-header h2 {
+#index-header h2 {
     font-size: 1.8rem;
     text-align: center;
 }
 
-header h3 {
+#index-header h3 {
     margin-top: 20px;
     font-size: 1.2rem;
     text-align: center;
 }
 
-main {
+#index-main {
     height: 320px;
     display: flex;
     flex-direction: column;
@@ -96,38 +111,22 @@ main {
     /* align-items: center; */
 }
 
-main h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    background-color: #cc550099;
-    border-radius: 5px;
-    padding: 5px 2px;
-    text-align: center;
-}
-
-main a {
+form[action='game.html'] input[type='submit'] {
     font-size: 1.4rem;
-    text-decoration: none;
     color: white;
-    /* border: 1px solid black; */
     border-radius: 10px;
+    border: none;
     margin: 15px 5px;
-    display: inline-block;
+    /* display: inline-block; */
     padding: 10px 15px;
     width: 150px;
     background-color: #cc0e0099;
-    /* border-radius: 5px; */
 }
 
-section {
+#index-main-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-section p {
-    text-align: center;
-    /* width: 150px; */
 }
 
 .transparent-orange-bg {
@@ -138,27 +137,24 @@ section p {
 
 
 @media (min-width: 600px) {
-    header {
+    #index-header {
         height: 300px;
     }
 
-    header h1 {
+    #index-header h1 {
         font-size: 5rem;
     }
 
-    header h2 {
+    #index-header h2 {
         font-size: 3.8rem;
     }
 
-    header h3 {
+    #index-header h3 {
         font-size: 2.2rem;
     }
 
-    main a {
+    form[action='game.html'] input[type='submit'] {
         font-size: 3rem;
-        margin: 15px 5px;
         width: 300px;
     }
-
-
 }

@@ -10,20 +10,29 @@
 </head>
 
 <body>
-    <header>
-        <div class="transparent-orange-bg">
-            <h1>Learn Japanese</h1>
-            <h2>Katakana & Hiragana</h2>
-            <h3>What would you like to learn?</h3>
-        </div>
-
-    </header>
-    <main>
-        <section>
-            <p><a href="">Hiragana</a></p>
-            <p><a href="">Katakana</a></p>
-        </section>
-    </main>
+    <div id="index-body">
+        <header id="index-header">
+            <div class="transparent-orange-bg">
+                <h1>Learn Japanese</h1>
+                <h2>Katakana & Hiragana</h2>
+                <h3>What would you like to learn?</h3>
+            </div>
+        </header>
+        <main id="index-main">
+            <section id="index-main-sec">
+                <form action="game.html" method="GET">
+                    <input type="hidden" name="gameType" value="hiragana">
+                    <input type="submit" value="Hiragana">
+                </form>
+                <form action="game.html" method="GET">
+                    <input type="hidden" name="gameType" value="Katakana">
+                    <input type="submit" value="Katakana">
+                </form>
+                <!-- <p><a href="">Hiragana</a></p>
+            <p><a href="">Katakana</a></p> -->
+            </section>
+        </main>
+    </div>
     <script src="app.js"></script>
 </body>
 

@@ -140,27 +140,18 @@ section p {
 @media (min-width: 600px) {
     header {
         height: 300px;
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* align-items: center; */
-        /* justify-content: flex-end; */
-        /* color: white; */
     }
 
     header h1 {
         font-size: 5rem;
-        text-align: center;
     }
 
     header h2 {
         font-size: 3.8rem;
-        text-align: center;
     }
 
     header h3 {
-        margin-top: 20px;
         font-size: 2.2rem;
-        text-align: center;
     }
 
     main a {

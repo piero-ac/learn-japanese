@@ -70,12 +70,15 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    color: white;
+}
+
+.japan-background {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg');
     background-position: center center;
     background-attachment: fixed;
-    color: white;
 }
 
 #index-header {

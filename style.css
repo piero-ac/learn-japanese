@@ -60,6 +60,7 @@ body {
     background-image: url('images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg');
     background-position: center center;
     background-attachment: fixed;
+    color: white;
 }
 
 header {
@@ -68,6 +69,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    color: white;
 }
 
 header h1 {
@@ -80,8 +82,14 @@ header h2 {
     text-align: center;
 }
 
+header h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 main {
-    height: 300px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,18 +99,24 @@ main {
 main h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    background-color: #cc550099;
+    border-radius: 5px;
+    padding: 5px 2px;
+    text-align: center;
 }
 
 main a {
     font-size: 1.4rem;
     text-decoration: none;
-    color: black;
-    border: 1px solid black;
+    color: white;
+    /* border: 1px solid black; */
     border-radius: 10px;
-    margin: 5px 5px;
+    margin: 15px 5px;
     display: inline-block;
-    padding: 5px 15px;
+    padding: 10px 15px;
     width: 150px;
+    background-color: #cc0e0099;
+    /* border-radius: 5px; */
 }
 
 section {
@@ -114,4 +128,10 @@ section {
 section p {
     text-align: center;
     /* width: 150px; */
+}
+
+.transparent-orange-bg {
+    background-color: #cc0e0099;
+    padding: 5px 10px;
+    border-radius: 10px;
 }

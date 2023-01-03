@@ -143,6 +143,9 @@ form[action='game.html'] input[type='submit'] {
     width: 300px;
     height: 300px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-type {
@@ -176,6 +179,13 @@ form[action='game.html'] input[type='submit'] {
     flex-shrink: 0;
 }
 
+#guessForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #guessForm #guessInput {
     font-size: 2rem;
     width: 100px;
@@ -185,12 +195,23 @@ form[action='game.html'] input[type='submit'] {
     border-radius: 5px;
 }
 
+#guessForm #guessSubmit {
+    font-size: 1.5rem;
+    padding: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
 #results {
     color: white;
     font-size: 1.5rem;
     background-color: #cc0e0099;
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+.img-box p {
+    font-size: 16rem;
 }
 
 
@@ -228,5 +249,9 @@ form[action='game.html'] input[type='submit'] {
 
     #game-main .img-box {
         margin-bottom: 60px;
+    }
+
+    .img-box p {
+        font-size: 25rem;
     }
 }

@@ -2,6 +2,7 @@ const gameTitle = document.querySelector("#game-main h1");
 const imgElement = document.querySelector("#char-img");
 const guessForm = document.querySelector("#guessForm");
 const results = document.querySelector("#results h2");
+const charParagraph = document.querySelector(".img-box p");
 
 const hiraganaChars = {
     'a': 'あ', 'i': 'い', 'u': 'う', 'e': 'え', 'o': 'お',
@@ -39,6 +40,13 @@ gameTitle.innerText = `Name the ${gameType} character`;
 
 // Get a Shuffle Charset for the Game
 const shuffledCharset = (gameType === 'Hiragana') ? shuffleCharset(hiraganaChars) : shuffleCharset(katakanaChars);
+
+let keys = Object.keys(shuffledCharset);
+let currentChar = keys[0];
+console.log(currentChar);
+
+// Event Listener to Submit Guess
+
 
 
 

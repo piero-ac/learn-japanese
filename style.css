@@ -205,9 +205,20 @@ form[action='game.html'] input[type='submit'] {
 #results {
     color: white;
     font-size: 1.5rem;
-    background-color: #cc0e0099;
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+.results {
+    background-color: #cc006999;
+}
+
+.correct {
+    background-color: #00cc3a99;
+}
+
+.incorrect {
+    background-color: #cc000099;
 }
 
 .img-box p {

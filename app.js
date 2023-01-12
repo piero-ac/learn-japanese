@@ -2,6 +2,7 @@ const gameTitle = document.querySelector("#game-main h1");
 const imgElement = document.querySelector("#char-img");
 const guessForm = document.querySelector("#guessForm");
 const guessInput = document.querySelector("#guessInput");
+const resultsContainer = document.querySelector("#results");
 const results = document.querySelector("#results h2");
 const charParagraph = document.querySelector(".img-box p");
 
@@ -49,6 +50,8 @@ let currentChar = keys[currentIndex];
 let numCorrect = 0;
 charParagraph.innerText = shuffledCharset[currentChar];
 
+resultsContainer.style.visibility = 'hidden';
+
 // Event Listener to Submit Guess
 guessForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -58,15 +61,23 @@ guessForm.addEventListener('submit', (e) => {
 
     if (guess === currentChar) {
         numCorrect++;
-        results.innerText = `You got ${numCorrect}/46 correct!`;
+        displayMessage('correct');
+    } else {
+        displayMessage('incorrect');
     }
     // Clear the input
     guessInput.value = '';
 
-    // Display the next character
-    updateCharacterDisplayed();
+    // Check if all characters have been displayed
+    if (currentIndex === keys.length - 1) {
+        displayFinalResult();
+        // Disable the form inputs
+        Array.from(guessForm.elements).forEach(formElement => formElement.disabled = true);
 
-
+    } else {
+        // Display the next character
+        updateCharacterDisplayed();
+    }
 })
 
 // Update character that appears
@@ -76,6 +87,26 @@ function updateCharacterDisplayed() {
     charParagraph.innerText = shuffledCharset[currentChar];
 }
 
+// Display Guess Result
+function displayMessage(result) {
+    results.innerText = (result === 'correct') ? 'Correct!' : 'Incorrect!';
+    resultsContainer.classList.add(result);
+    resultsContainer.style.visibility = 'visible';
+
+    setTimeout(() => {
+        resultsContainer.classList.remove(result);
+        resultsContainer.style.visibility = 'hidden';
+        results.innerText = '';
+    }, 800)
+}
+
+// Display Final Results Message
+function displayFinalResult() {
+    charParagraph.innerText = 'X';
+    resultsContainer.classList.add('results');
+    resultsContainer.style.visibility = 'visible';
+    results.innerText = `You got ${numCorrect}/46!`;
+}
 
 // Shuffle the Charset
 function shuffleCharset(charset) {

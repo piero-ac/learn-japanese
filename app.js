@@ -65,19 +65,16 @@ guessForm.addEventListener('submit', (e) => {
     } else {
         displayMessage('incorrect');
     }
-    // Clear the input
-    guessInput.value = '';
 
     // Check if all characters have been displayed
     if (currentIndex === keys.length - 1) {
         displayFinalResult();
-        // Disable the form inputs
-        Array.from(guessForm.elements).forEach(formElement => formElement.disabled = true);
-
     } else {
         // Display the next character
         updateCharacterDisplayed();
     }
+    // Clear the input
+    guessInput.value = '';
 })
 
 // Update character that appears
@@ -106,6 +103,8 @@ function displayFinalResult() {
     resultsContainer.classList.add('results');
     resultsContainer.style.visibility = 'visible';
     results.innerText = `You got ${numCorrect}/46!`;
+    // Disable the form inputs
+    Array.from(guessForm.elements).forEach(formElement => formElement.disabled = true);
 }
 
 // Shuffle the Charset
